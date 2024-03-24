@@ -1,39 +1,35 @@
+import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/LogIn.dart';
-import 'package:flutter_application_1/Screens/SplashScreen.dart';
-import 'package:flutter_application_1/Screens/SignUp.dart';
-
-// void main() => runApp(const MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       theme: ,
-//       home: SplashScreen(),
-//     ));
+import 'package:flutter/widgets.dart';
 
 
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class _LogInState extends StatefulWidget {
+  const _LogInState({super.key});
+
+  @override
+  State<_LogInState> createState() => __LogInStateState();
+}
+
+class __LogInStateState extends State<_LogInState> {
+
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Tution Master',
-      theme: ThemeData(
-        useMaterial3: true,
-      
+    return Scaffold(
+      body:Container(
+        width:double.infinity,
+        decoration:BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            colors: [Colors.purple.shade900,
+            Colors.green.shade800,
+            Colors.blue.shade800],
+          ),
+        ), 
+
       ),
-      initialRoute: 'splash',
-      routes: {
-        // 'splash': (context) =>const SplashScreen(),
-        // 'fogot_pwd': (context) => const ForgotPasswordPage(),
-        // // 'register': (context) => RegisterPage(),
-        // 'login': (context) =>  LogIn(),
-        // // 'home': (context) => HomePage(),
-        // // 'profile': (context) => ProfilePage(),
-        
-      },
     );
   }
 }
