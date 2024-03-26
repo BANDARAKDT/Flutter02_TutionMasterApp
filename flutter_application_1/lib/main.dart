@@ -1,34 +1,27 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/Screens/SplashScreen.dart';
+// Import your splash screen widget
 
-
-
-class _LogInState extends StatefulWidget {
-  const _LogInState({super.key});
-
-  @override
-  State<_LogInState> createState() => __LogInStateState();
-}
-
-class __LogInStateState extends State<_LogInState> {
-
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Container(
-        width:double.infinity,
-        decoration:BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            colors: [Colors.purple.shade900,
-            Colors.green.shade800,
-            Colors.blue.shade800],
-          ),
-        ), 
-
+      appBar: AppBar(
+        title: const Text('Main Page'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // Navigate to the splash screen
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SplashScreen()),
+            );
+          },
+          child: const Text('Go to Splash Screen'),
+        ),
       ),
     );
   }
