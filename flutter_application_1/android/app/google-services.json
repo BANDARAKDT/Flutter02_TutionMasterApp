@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "246107444879",
+    "project_id": "tutionmaster-adb2f",
+    "storage_bucket": "tutionmaster-adb2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246107444879:android:e162da4b8746c0113582fa",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANleVYsUYwJr93v95kWQraf83-j9uiUBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

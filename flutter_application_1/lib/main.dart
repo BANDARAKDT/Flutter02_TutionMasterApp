@@ -1,28 +1,26 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/SplashScreen.dart';
+
 // Import your splash screen widget
 
-class MainPage extends StatelessWidget {
-  const MainPage({super.key});
+void main()async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Main Page'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Navigate to the splash screen
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SplashScreen()),
-            );
-          },
-          child: const Text('Go to Splash Screen'),
-        ),
+    return const MaterialApp(
+      home: Scaffold(
+        body: Text("dela"),
       ),
     );
   }
+}
+
+class ConnectionFirebase {
+  const ConnectionFirebase();
 }
