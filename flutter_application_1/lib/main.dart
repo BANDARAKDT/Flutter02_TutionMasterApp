@@ -1,11 +1,21 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Services/firebase_options.dart';
 
 // Import your splash screen widget
 
-void main()async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  GetIt.instance.registerSingleton<FirebaseService>(
+    FirebaseService(),
+  );
+  GetIt.instance.registerSingleton<EmailService>(
+    EmailService(),
+  );
+  await FirebaseAppCheck.instance.setTokenAutoRefreshEnabled(false);
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
