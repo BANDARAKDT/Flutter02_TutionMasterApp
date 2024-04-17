@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Services/firebase_options.dart';
+import 'package:flutter_application_1/Services/firebase_services.dart';
 
 // Import your splash screen widget
 
@@ -9,7 +10,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  GetIt.instance.registerSingleton<FirebaseService>(
+  GetIt.instance.registerSingleton<firebase_services>(
     FirebaseService(),
   );
   GetIt.instance.registerSingleton<EmailService>(
