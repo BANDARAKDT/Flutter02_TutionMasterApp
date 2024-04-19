@@ -10,14 +10,14 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  GetIt.instance.registerSingleton<firebase_services>(
-    FirebaseService(),
-  );
-  GetIt.instance.registerSingleton<EmailService>(
-    EmailService(),
-  );
-  await FirebaseAppCheck.instance.setTokenAutoRefreshEnabled(false);
-  runApp(const MyApp());
+  // GetIt.instance.registerSingleton<firebase_services>(
+  //   FirebaseService(),
+  // );
+  // GetIt.instance.registerSingleton<EmailService>(
+  //   EmailService(),
+  // );
+  // await FirebaseAppCheck.instance.setTokenAutoRefreshEnabled(false);
+  // runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
