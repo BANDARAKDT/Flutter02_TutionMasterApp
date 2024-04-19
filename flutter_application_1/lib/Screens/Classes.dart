@@ -1,16 +1,56 @@
 import 'package:flutter/material.dart';
 
-
-class _ClasseState extends StatefulWidget {
-  const _ClasseState({super.key});
+class Classe extends StatefulWidget {
+  const Classe({Key? key}) : super(key: key);
 
   @override
-  State<_ClasseState> createState() => __ClasseStateState();
+  _ClasseState createState() => _ClasseState();
 }
 
-class __ClasseStateState extends State<_ClasseState> {
+class _ClasseState extends State<Classe> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Custom App Bar'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              // Add your search functionality here
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {
+              // Add your settings functionality here
+            },
+          ),
+        ],
+      ),
+      body: Center(
+        child: Text(
+          'Body Content',
+          style: TextStyle(fontSize: 24),
+        ),
+      ),
+    );
+  }
+}
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Classe(),
+    );
   }
 }
