@@ -11,6 +11,11 @@ class Attendence extends StatefulWidget {
 class _AttendenceState extends State<Attendence> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      title: "Attendence Screen",
+      theme: ThemeData(
+        primaryColor: Colors.purple[400],
+      ),
+    );
   }
 }
