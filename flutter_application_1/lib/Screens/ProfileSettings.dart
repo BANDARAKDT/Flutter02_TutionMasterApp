@@ -11,6 +11,18 @@ class ProfileSettings extends StatefulWidget {
 class _ProfileSettingsState extends State<ProfileSettings> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('profile Screen'),
+      ),
+      body: ListView.builder(
+        itemCount: 100,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text('profile Item $index'),
+          );
+        },
+      ),
+    );
   }
 }

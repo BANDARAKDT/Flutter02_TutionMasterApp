@@ -9,7 +9,19 @@ class Schedule extends StatefulWidget {
 
 class _ScheduleState extends State<Schedule> {
   @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
+   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Schedule Screen'),
+      ),
+      body: ListView.builder(
+        itemCount: 100,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text('Schedule Item $index'),
+          );
+        },
+      ),
+    );
   }
 }
