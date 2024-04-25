@@ -47,13 +47,13 @@ class MyApp extends StatelessWidget {
  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Attendance Screen'),
+        title: Text('class Screen'),
       ),
       body: ListView.builder(
         itemCount: 100,
         itemBuilder: (context, index) {
           return ListTile(
-            title: Text('Attendance Item $index'),
+            title: Text('class Item $index'),
           );
         },
       ),
