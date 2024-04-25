@@ -14,11 +14,13 @@ class _AttendenceState extends State<Attendence> {
       appBar: AppBar(
         title: Text('Attendance Screen'),
       ),
-      body: Center(
-        child: Text(
-          'Attendance Content',
-          style: TextStyle(fontSize: 24),
-        ),
+      body: ListView.builder(
+        itemCount: 100,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text('Attendance Item $index'),
+          );
+        },
       ),
     );
   }
