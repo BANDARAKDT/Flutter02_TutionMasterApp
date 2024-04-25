@@ -44,13 +44,18 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+ Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Attendance Screen'),
       ),
-      home: Classe(),
+      body: ListView.builder(
+        itemCount: 100,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text('Attendance Item $index'),
+          );
+        },
+      ),
     );
-  }
-}
+  }}
