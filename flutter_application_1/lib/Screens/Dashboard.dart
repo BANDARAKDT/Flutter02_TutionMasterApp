@@ -16,7 +16,7 @@ class _DashboardState extends State<Dashboard> {
       ),
       body: Center(
         child: Text(
-          'Dashboard Content',
+          'Userdashboard',
           style: TextStyle(fontSize: 24),
         ),
       ),
