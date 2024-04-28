@@ -12,13 +12,34 @@ class _AttendenceState extends State<Attendence> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Attendance Screen'),
+        title: const Text('Attendance Screen'),
       ),
       body: ListView.builder(
         itemCount: 100,
         itemBuilder: (context, index) {
-          return ListTile(
-            title: Text('Attendance Item $index'),
+          return Container(
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(color: Colors.grey[300]!),
+              ),
+            ),
+            child: ListTile(
+              leading: const Icon(
+                Icons.person,
+                color: Colors.blue,
+              ),
+              title: Text(
+                'Attendance Item $index',
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              trailing: const Icon(
+                Icons.check,
+                color: Colors.green,
+              ),
+            ),
           );
         },
       ),
@@ -38,7 +59,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Attendence(),
+      home: const Attendence(),
     );
   }
 }
