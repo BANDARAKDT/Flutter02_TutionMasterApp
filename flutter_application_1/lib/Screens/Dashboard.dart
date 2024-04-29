@@ -1,24 +1,31 @@
 import 'package:flutter/material.dart';
 
-class Dashboard extends StatefulWidget {
+class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
 
-  @override
-  _DashboardState createState() => _DashboardState();
-}
-
-class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: Text('Dashboard Screen'),
+        title: Text('Dashboard'),
       ),
       body: Center(
-        child: Text(
-          'Userdashboard',
-          style: TextStyle(fontSize: 24),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Welcome to the Tuition Class App',
+              style: TextStyle(fontSize: 24),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Add navigation logic to your tuition class screen
+              },
+              child: Text('Go to Tuition Classes'),
+            ),
+          ],
         ),
       ),
     );
