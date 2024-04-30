@@ -1,33 +1,29 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_application_1/Screens/Dashboard.dart';
 import 'package:flutter_application_1/Services/firebase_options.dart';
 import 'package:flutter_application_1/Services/firebase_services.dart';
-
-// Import your splash screen widget
+ // Import your Dashboard widget
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  // GetIt.instance.registerSingleton<firebase_services>(
-  //   FirebaseService(),
-  // );
-  // GetIt.instance.registerSingleton<EmailService>(
-  //   EmailService(),
-  // );
-  // await FirebaseAppCheck.instance.setTokenAutoRefreshEnabled(false);
-  // runApp(const MyApp());
+  runApp(MyApp());
 }
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Text("dela"),
-      ),
+    return MaterialApp(
+      // Define the initial route
+      initialRoute: '/',
+      // Define routes
+      routes: {
+      //  '/': (context) => const SplashScreen(), // Your splash screen widget
+        '/dashboard': (context) => Dashboard(), // Route to Dashboard.dart
+      },
     );
   }
 }
