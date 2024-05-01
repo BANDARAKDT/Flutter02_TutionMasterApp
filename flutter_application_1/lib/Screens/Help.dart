@@ -24,25 +24,34 @@ class _HelpState extends State<Help> {
   }
 }
 
-void main() {
-  runApp(MyApp());
-}
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('help Screen'),
+        title: Text('MyApp'),
       ),
       body: ListView.builder(
         itemCount: 100,
         itemBuilder: (context, index) {
           return ListTile(
-            title: Text('help Item $index'),
+            title: Text('Item $index'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Help()),
+              );
+            },
           );
         },
       ),
     );
   }
+}
+
+void main() {
+  runApp(MaterialApp(
+    title: 'Navigation Example',
+    home: MyApp(),
+  ));
 }
