@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Schedule extends StatefulWidget {
-  const Schedule({super.key});
+  const Schedule({Key? key}) : super(key: key); // Added the 'Key' parameter
 
   @override
   State<Schedule> createState() => _ScheduleState();
@@ -9,7 +9,7 @@ class Schedule extends StatefulWidget {
 
 class _ScheduleState extends State<Schedule> {
   @override
-   Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Schedule Screen'),
